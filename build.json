@@ -20,6 +20,10 @@
     }
   ],
   "post-processors": [
+    [{
+      "type": "vagrant",
+      "keep_input_artifact": false
+    },
     {
       "type": "atlas",
       "token": "{{user `atlas_token`}}",
@@ -30,7 +34,7 @@
         "created_at": "{{timestamp}}",
         "version": "{{user `version`}}"
       }
-    }
+    }]
   ],
   "builders": [
     {
