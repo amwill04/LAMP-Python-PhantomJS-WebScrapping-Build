@@ -19,23 +19,6 @@
       ]
     }
   ],
-  "post-processors": [
-    [{
-      "type": "vagrant",
-      "keep_input_artifact": false
-    },
-    {
-      "type": "atlas",
-      "token": "{{user `atlas_token`}}",
-      "artifact": "{{user `ATLAS_USERNAME`}}/{{user `PACKER_BOX_NAME`}}",
-      "artifact_type": "vagrant.box",
-      "metadata": {
-        "provider": "virtualbox",
-        "created_at": "{{timestamp}}",
-        "version": "{{user `version`}}"
-      }
-    }]
-  ],
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -79,5 +62,22 @@
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ]
     }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "vagrant",
+        "keep_input_artifact": false
+      },
+      {
+        "type": "atlas",
+        "artifact": "amwill04/LAMP-PP64",
+        "artifact_type": "vagrant.box",
+        "metadata": {
+          "provider": "virtualbox",
+          "version": "0.0.1"
+        }
+      }
+    ]
   ]
 }
