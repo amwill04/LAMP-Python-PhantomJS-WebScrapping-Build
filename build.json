@@ -1,7 +1,7 @@
 {
   "variables": {
       "atlas_username": "{{env `ATLAS_USERNAME`}}",
-      "PACKER_BOX_NAME": "LAMP-PP64",
+      "box_name": "LAMP-PP64",
       "cloud_token": "{{env `ATLAS_TOKEN`}}",
       "version": "0.0.1"
   },
@@ -71,7 +71,7 @@
       },
       {
         "type": "atlas",
-        "artifact": "amwill04/LAMP-PP64",
+        "artifact": "{{user `atlas_username`}}/{{user `box_name`}}",
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "virtualbox",
