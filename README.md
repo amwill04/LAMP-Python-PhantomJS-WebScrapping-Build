@@ -18,6 +18,9 @@ atlas.hashicorp.com
 To use simply:
 
 `$ git clone https://github.com/amwill04/LAMP-Python-PhantomJS-WebScrapping-Build`
+`$ export ATLAS_TOKEN="{your acess token from atlas.hashicorp.com}"`
+
+Finally change the artifact in the post-processors section to {atlas username}/{box name}
 
 
 ## Further Development
