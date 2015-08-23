@@ -5,21 +5,25 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
-      "scripts": [
-        "scripts/base.sh",
-        "scripts/vagrant.sh",
-        "scripts/virtualbox.sh",
-        "scripts/cleanup.sh",
-        "scripts/zerodisk.sh",
-        "scripts/puppet.sh"
-      ]
+      "execute_command": "sudo sh '{{.Path}}'",
+      "script": "scripts/puppet.sh"
     },
     {
       "type": "puppet-masterless",
       "manifest_file": "./puppet/manifests/site.pp",
       "module_paths": "./puppet/modules/",
       "prevent_sudo": false
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' |sudo -S sh '{{.PAth}}'",
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/virtualbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
     }
   ],
   "builders": [
@@ -75,11 +79,11 @@
       {
         "type": "atlas",
         "token": "{{user `atlas_token`}}",
-        "artifact": "{atlas username}/{box nam}",
+        "artifact": "amwill04/LAMP-PP64",
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "virtualbox",
-          "version": "0.0.2"
+          "version": "0.0.5"
         }
       }
     ]

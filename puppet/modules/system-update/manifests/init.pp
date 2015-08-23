@@ -21,6 +21,11 @@ class system-packages {
   command => "sudo apt-get install unzip -y",
   require => Exec["apt-get upgrade"]
   }
+
+  exec { "curl":
+  command => "sudo apt-get install curl -y",
+  require => Exec["apt-get upgrade"]
+  }
 }
 
 class profile-update {
