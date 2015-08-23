@@ -1,6 +1,6 @@
 {
   "variables": {
-      "atlas_token": "{{env `ATLAS_TOKEN`}}",
+      "atlas_token": "{{env `ATLAS_TOKEN`}}"
   },
   "provisioners": [
     {
@@ -14,6 +14,12 @@
         "scripts/zerodisk.sh",
         "scripts/puppet.sh"
       ]
+    },
+    {
+      "type": "puppet-masterless",
+      "manifest_file": "./puppet/manifests/site.pp",
+      "module_paths": "./puppet/modules/",
+      "prevent_sudo": false
     }
   ],
   "builders": [
@@ -69,11 +75,11 @@
       {
         "type": "atlas",
         "token": "{{user `atlas_token`}}",
-        "artifact": "{atlas username}/{box name}",
+        "artifact": "{atlas username}/{box nam}",
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "virtualbox",
-          "version": "0.0.1"
+          "version": "0.0.2"
         }
       }
     ]

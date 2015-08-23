@@ -24,9 +24,12 @@ Finally change the artifact in the post-processors section to {atlas username}/{
 
 
 ## Further Development
-The build currently isn't utilising puppet cm. Puppet has been installed and the
+~~The build currently isn't utilising puppet cm. Puppet has been installed and the
 next version will apply modules that have written for the vagrant file currently
-located at amwill04/LAMP-PP.
+located at amwill04/LAMP-PP.~~ DONE
+
+* Reduce size of vagrant box
+* Add further packages.
 
 ## Special Thanks
 The script files, excluding puppet.sh are default scripts from the packer tutorial
