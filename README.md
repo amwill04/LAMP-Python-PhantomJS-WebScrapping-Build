@@ -11,13 +11,15 @@ it to atlas for your own custom box.
 
 * Packer
 
+* atlas.hashicorp.com - if wishing to host vagrant box
+
 For documentation and a very helpful step-by-step guide in installing packer visit
 atlas.hashicorp.com
 
 ## Use
 To use simply:
 
-`$ git clone https://github.com/amwill04/LAMP-Python-PhantomJS-WebScrapping-Build`
+`$ git clone https://github.com/amwill04/Packer-LAMP-Python-PhantomJS-WebScrapping-Build`
 `$ export ATLAS_TOKEN="{your acess token from atlas.hashicorp.com}"`
 
 Finally change the artifact in the post-processors section to {atlas username}/{box name}

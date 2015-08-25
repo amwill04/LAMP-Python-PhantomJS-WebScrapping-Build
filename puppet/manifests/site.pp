@@ -3,9 +3,7 @@ Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
 include system-update
 include system-packages
 include profile-update
-include chrome
-include chromedriver
-include mysql
+include mysql::server
 include python
 include git
 include phantomjs
