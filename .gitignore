@@ -3,3 +3,7 @@
 *.jpeg
 
 Vagrantfile
+
+*.vdi
+
+*.iso
