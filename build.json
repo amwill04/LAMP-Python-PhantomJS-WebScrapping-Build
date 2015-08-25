@@ -37,7 +37,7 @@
           " nofb",
           " fb=false",
           " auto=true",
-          " url=http://{{.HTTPIP}}:{{.HTTPPort}}/preseed.cfg",
+          " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
           " hostname=vagrant",
           " DEBCONF_DEBUG=5",
           " --",

@@ -8,7 +8,8 @@ aptitude -y purge ri
 aptitude -y purge installation-report landscape-common wireless-tools wpasupplicant ubuntu-serverguide
 aptitude -y purge python-dbus libnl1 python-smartpm python-twisted-core libiw30
 aptitude -y purge python-twisted-bin libdbus-glib-1-2 python-pexpect python-pycurl python-serial python-gobject python-pam python-openssl libffi5
-apt-get purge -y linux-image-3.0.0-12-generic-pae
+aptitude -y purge linux-image-3.0.0-12-generic-pae linux-image-extra-3.13.0-62-generic linux-headers-3.13.0-62-generic libruby1.9.1 libx11-doc
+aptitude -y purge language-pack-gnome-en-base discover-data language-pack-en-base libfreetype6-dev libx11-dev x11proto-core-dev
 
 # Remove APT cache
 apt-get clean -y
