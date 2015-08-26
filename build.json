@@ -45,7 +45,7 @@
           "<enter>"
         ],
       "boot_wait": "10s",
-      "disk_size": 40960,
+      "disk_size": 20480,
       "guest_os_type": "Ubuntu_64",
       "http_directory": "http",
       "iso_checksum": "7297321c2fa6424417a548c85edd6e98",
@@ -57,7 +57,7 @@
       "ssh_wait_timeout": "60m",
       "shutdown_command": "echo 'shutdown -P now' > /tmp/shutdown.sh; echo 'vagrant'|sudo -S sh '/tmp/shutdown.sh'",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "4096" ]
+        [ "modifyvm", "{{.Name}}", "--memory", "1024" ]
       ]
     }
   ],
@@ -74,7 +74,7 @@
         "artifact_type": "vagrant.box",
         "metadata": {
           "provider": "virtualbox",
-          "version": "0.0.6"
+          "version": "0.0.7"
         }
       }
     ]
