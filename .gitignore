@@ -7,3 +7,5 @@ Vagrantfile
 *.vdi
 
 *.iso
+
+*.box
